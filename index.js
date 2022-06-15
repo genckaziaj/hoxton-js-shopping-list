@@ -17,3 +17,35 @@ Tips
 Challenge
 We should be able to expand the list. As such, find a way to have two prompts, one for the item and another for the price, asking you repeatedly to add items to your list. The user should be able to stop adding items and then output the list to the user. We can use Google in our favour here if we know the right questions to ask
 */
+
+let shoppingList = [
+  ["Milk", 1.2],
+  ["Cocoa", 2.0],
+  ["Salad", 2.0],
+  ["Carrots", 2.0],
+  ["Tomatoes", 2.5],
+  ["Readymeals", 5.0],
+];
+
+let item = prompt("What item do you want to add to the shopping list?");
+let price = Number(prompt("What is the price of the item?"));
+
+shoppingList.push([item, price]);
+
+console.log(shoppingList);
+
+let total = 0;
+
+console.log("This is the shopping list with its respective prices:");
+for (item of shoppingList) {
+  console.log(
+    `The item is ${item[0].toLowerCase()} and its price is £${item[1].toFixed(
+      2
+    )}`
+  );
+  total += item[1];
+}
+
+console.log(
+  `The total price of all shopping list items is £${total.toFixed(2)}`
+);
