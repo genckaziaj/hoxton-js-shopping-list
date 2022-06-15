@@ -1,4 +1,6 @@
 /*
+Today's exercise: Shopping list
+Repo: hoxton-js-shopping-list
 Description
 We want you to create a shopping list price displayer. You should be able to see in a list each item followed by its price!
 
